@@ -1,4 +1,4 @@
-# Nail Studio Backend
+# AI Nail Salon Booking Assistant
 
 Node/Express backend for a small nail salon assistant:
 
