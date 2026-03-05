@@ -1,5 +1,7 @@
 # AI Nail Salon Booking Assistant
 
+DEMO: https://youtu.be/OZFcRUD40TM
+
 Node/Express backend for a small nail salon assistant:
 
 - REST API for services, slots, bookings, and admin views
