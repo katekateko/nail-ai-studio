@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nail Studio – Wirtualny konsultant</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html#top" class="brand">
+              <div class="brand-mark">N</div>
+              <div class="brand-text">
+                <div class="brand-title">Nail Studio</div>
+                <div class="brand-subtitle" data-i18n="brand.subtitle">
+                  Nowoczesny manicure &amp; pielęgnacja
+                </div>
+              </div>
+            </a>
+            <nav aria-label="Main menu">
+              <a href="index.html#services" data-i18n="nav.services">Usługi</a>
+              <a href="index.html#opinions" data-i18n="nav.opinions">Opinie</a>
+              <a href="index.html#location" data-i18n="nav.location"
+                >Lokalizacja</a
+              >
+              <a href="index.html#hours" data-i18n="nav.hours"
+                >Godziny otwarcia</a
+              >
+            </nav>
+            <div class="header-actions">
+              <div class="lang-switch" aria-label="Wybór języka">
+                <button
+                  class="lang-btn lang-btn--active"
+                  type="button"
+                  data-lang="pl"
+                >
+                  PL
+                </button>
+                <button class="lang-btn" type="button" data-lang="en">
+                  EN
+                </button>
+              </div>
+              <a href="reservation.html" class="btn-primary">
+                <span data-i18n="header.book">Umów wizytę</span>
+                <span>➜</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero hero--full-chat">
+          <div class="container">
+            <div class="hero-grid hero-grid--full-chat">
+              <div>
+                <div class="hero-eyebrow">
+                  <span class="hero-eyebrow-dot"></span>
+                  <span data-i18n="hero.eyebrow">
+                    Dopasowany manicure. Spokojna atmosfera.
+                  </span>
+                </div>
+                <h1 class="hero-title">
+                  <span data-i18n="hero.chat.page.title.part1">
+                    Wirtualny konsultant
+                  </span>
+                  <span data-i18n="hero.chat.page.title.highlight">
+                    NAIL STUDIO
+                  </span>
+                </h1>
+                <aside
+                  class="hero-card hero-card--chat"
+                  aria-label="Wirtualny konsultant Nail Studio"
+                >
+                  <div class="hero-chat-header">
+                    <div class="hero-chat-bot">
+                      <div class="hero-chat-avatar">AI</div>
+                      <div class="hero-chat-meta">
+                        <div
+                          class="hero-chat-title"
+                          data-i18n="hero.chat.title"
+                        >
+                          Zapytaj o swoje paznokcie
+                        </div>
+                        <div class="hero-chat-status">
+                          <span class="hero-chat-status-dot"></span>
+                          <span data-i18n="hero.chat.status">
+                            Online · odpowiada w kilka sekund
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hero-chat-tag" data-i18n="hero.chat.badge">
+                      Doradztwo 24/7
+                    </div>
+                  </div>
+
+                  <div class="chat-window">
+                    <div class="chat-messages" id="chat-messages">
+                      <div class="chat-row chat-row--ai">
+                        <div class="chat-bubble chat-bubble--ai">
+                          <span
+                            class="hero-chat-bubble-strong"
+                            data-i18n="hero.chat.bubble.strong"
+                          >
+                            Cześć, jestem wirtualnym konsultantem Nail Studio.
+                          </span>
+                          <span data-i18n="hero.chat.bubble.body">
+                            Zadaj mi dowolne pytanie o NAIL STUDIO.
+                          </span>
+                          <div class="chat-meta" data-i18n="hero.chat.meta.ai">
+                            Agent AI · zawsze dostępny
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="hero-chat-footer">
+                      <input
+                        type="text"
+                        class="hero-chat-input"
+                        id="chat-input"
+                        data-i18n-placeholder="hero.chat.input.placeholder"
+                        placeholder="Napisz pytanie o nasze usługi…"
+                        aria-label="Zadaj pytanie o usługi Nail Studio"
+                      />
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-inner">
+            <a href="adminsignin.html" class="btn-primary footer-admin-btn">NAIL STUDIO ADMIN</a>
+            <div class="footer-copy">
+              © <span id="year"></span>
+              <span data-i18n="footer.copy">
+                Nail Studio. Wszystkie prawa zastrzeżone.
+              </span>
+            </div>
+            <div class="footer-links">
+              <a
+                id="location"
+                href="index.html#location"
+                data-i18n="footer.location"
+              >
+                Ul. Główna 25 · Centrum miasta
+              </a>
+              <a
+                id="hours"
+                href="index.html#hours"
+                data-i18n="footer.hours"
+              >
+                Pon–Pt 10:00–19:00 · Sob 10:00–16:00
+              </a>
+              <a
+                href="mailto:hello@nailstudio.example"
+                data-i18n="footer.email"
+              >
+                hello@nailstudio.example
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script>
+      // Current year in footer
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+
+      // Same translations object as on main page
+      const translations = {
+        pl: {
+          "brand.subtitle": "Nowoczesny manicure & pielęgnacja",
+          "nav.services": "Usługi",
+          "nav.opinions": "Opinie",
+          "nav.location": "Lokalizacja",
+          "nav.hours": "Godziny otwarcia",
+          "header.book": "Umów wizytę",
+          "hero.eyebrow": "Dopasowany manicure. Spokojna atmosfera.",
+          "hero.chat.page.title.part1": "Wirtualny konsultant",
+          "hero.chat.page.title.highlight": "NAIL STUDIO",
+          "hero.chat.page.subtitle":
+            "Masz pytanie o usługi, dostępne terminy lub pielęgnację po wizycie? Napisz do naszego wirtualnego konsultanta – odpowie w kilka sekund, o każdej porze dnia.",
+          "hero.chat.title": "Zapytaj o swoje paznokcie",
+          "hero.chat.status": "Online · odpowiada w kilka sekund",
+          "hero.chat.badge": "Doradztwo 24/7",
+          "hero.chat.bubble.strong":
+            "Cześć, jestem wirtualnym konsultantem Nail Studio.",
+          "hero.chat.bubble.body":
+            "Zadaj mi dowolne pytanie o NAIL STUDIO.",
+          "hero.chat.meta.ai": "Agent AI · zawsze dostępny",
+          "hero.chat.input.placeholder":
+            "Napisz pytanie o nasze usługi…",
+          "footer.copy": "Nail Studio. Wszystkie prawa zastrzeżone.",
+          "footer.location": "Ul. Główna 25 · Centrum miasta",
+          "footer.hours": "Pon–Pt 10:00–19:00 · Sob 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+        en: {
+          "brand.subtitle": "Modern beauty & care",
+          "nav.services": "Services",
+          "nav.opinions": "Opinions",
+          "nav.location": "Location",
+          "nav.hours": "Opening hours",
+          "header.book": "Book an appointment",
+          "hero.eyebrow": "Tailored nails. Calm atmosphere.",
+          "hero.chat.page.title.part1": "Virtual consultant",
+          "hero.chat.page.title.highlight": "NAIL STUDIO",
+          "hero.chat.page.subtitle":
+            "Have a question about services, availability or after‑care? Message our virtual consultant – replies in seconds, any time of day.",
+          "hero.chat.title": "Ask about your nails",
+          "hero.chat.status": "Online · replies in seconds",
+          "hero.chat.badge": "Advice 24/7",
+          "hero.chat.bubble.strong":
+            "Hi, I'm the Nail Studio virtual consultant.",
+          "hero.chat.bubble.body":
+            "Ask me anything about NAIL STUDIO.",
+          "hero.chat.meta.ai": "AI agent · always online",
+          "hero.chat.input.placeholder":
+            "Type a question about our services…",
+          "footer.copy": "Nail Studio. All rights reserved.",
+          "footer.location": "Main street 25 · City center",
+          "footer.hours": "Mon–Fri 10:00–19:00 · Sat 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+      };
+
+      function applyLanguage(lang) {
+        const dict = translations[lang];
+        if (!dict) return;
+
+        document.documentElement.lang = lang;
+        document.title =
+          lang === "pl"
+            ? "Nail Studio – Wirtualny konsultant"
+            : "Nail Studio – Virtual consultant";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value = dict[key];
+          if (typeof value === "string") {
+            el.textContent = value;
+          }
+        });
+
+        document
+          .querySelectorAll("[data-i18n-placeholder]")
+          .forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            const value = dict[key];
+            if (typeof value === "string") {
+              el.setAttribute("placeholder", value);
+            }
+          });
+
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => {
+            const isActive = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("lang-btn--active", isActive);
+          });
+
+        try {
+          window.localStorage.setItem("nailStudioLang", lang);
+        } catch (_) {}
+      }
+
+      (function initLanguageSwitcher() {
+        let initial = "pl";
+        try {
+          const stored = window.localStorage.getItem("nailStudioLang");
+          if (stored === "pl" || stored === "en") {
+            initial = stored;
+          }
+        } catch (_) {}
+
+        applyLanguage(initial);
+
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const lang = btn.getAttribute("data-lang");
+              if (!lang) return;
+              applyLanguage(lang);
+            });
+          });
+      })();
+
+      (function initChat() {
+        const input = document.getElementById("chat-input");
+        const messages = document.getElementById("chat-messages");
+        if (!input || !messages) return;
+
+        let sessionId = localStorage.getItem("sessionId") || null;
+        const conversationHistory = [];
+
+        function appendMessage({ from, text }) {
+          const row = document.createElement("div");
+          row.className =
+            "chat-row " + (from === "user" ? "chat-row--user" : "chat-row--ai");
+
+          const bubble = document.createElement("div");
+          bubble.className =
+            "chat-bubble " +
+            (from === "user" ? "chat-bubble--user" : "chat-bubble--ai");
+
+          const content = document.createElement("div");
+          content.textContent = text;
+          bubble.appendChild(content);
+
+          const meta = document.createElement("div");
+          meta.className = "chat-meta";
+          const now = new Date();
+          const time = now.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          const lang = document.documentElement.lang || "pl";
+          meta.textContent =
+            from === "user" ? (lang === "pl" ? "Ty" : "You") + " · " + time : "AI · " + time;
+          bubble.appendChild(meta);
+
+          row.appendChild(bubble);
+          messages.appendChild(row);
+          messages.scrollTop = messages.scrollHeight;
+        }
+
+        const CHAT_API = (window.NAIL_STUDIO_API_BASE || "http://localhost:3001") + "/chat";
+        const FALLBACK_PL = "Jak mogę pomóc?";
+        const FALLBACK_EN = "How can I help you?";
+
+        async function getAiReply(message, history, lang) {
+          try {
+            const body = {
+              message,
+              sessionId,
+              messages: history,
+              lang: lang === "pl" || lang === "en" ? lang : "pl",
+            };
+            const response = await fetch(CHAT_API, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(body),
+            });
+            const data = await response.json();
+
+            if (data.sessionId) {
+              sessionId = data.sessionId;
+              try {
+                localStorage.setItem("sessionId", sessionId);
+              } catch (_) {}
+            }
+
+            const reply = response.ok && data && typeof data.reply === "string"
+              ? data.reply
+              : null;
+            const oldRussianPhrase = "Я помогу вам выбрать услугу";
+            const safeReply = (reply && reply.includes(oldRussianPhrase))
+              ? (lang === "pl" ? FALLBACK_PL : FALLBACK_EN)
+              : reply;
+            return safeReply || (lang === "pl" ? FALLBACK_PL : FALLBACK_EN);
+          } catch (_) {
+            return lang === "pl"
+              ? "Nie mogę połączyć się z konsultantem. Sprawdź połączenie lub spróbuj później."
+              : "Could not reach the consultant. Check your connection or try again later.";
+          }
+        }
+
+        async function respondTo(message) {
+          const lang = document.documentElement.lang || "pl";
+          const reply = await getAiReply(message, conversationHistory, lang);
+          appendMessage({ from: "ai", text: reply });
+          conversationHistory.push({ role: "user", content: message });
+          conversationHistory.push({ role: "assistant", content: reply });
+        }
+
+        function handleSubmit(value) {
+          const trimmed = value.trim();
+          if (!trimmed) return;
+          appendMessage({ from: "user", text: trimmed });
+          input.value = "";
+          respondTo(trimmed);
+        }
+
+        input.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter") return;
+          event.preventDefault();
+          handleSubmit(input.value);
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get("q");
+        if (q) {
+          handleSubmit(q);
+        }
+      })();
+    </script>
+  </body>
+</html>
+

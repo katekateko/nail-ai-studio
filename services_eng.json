@@ -1,0 +1,44 @@
+[
+  {
+    "id": "classic-manicure",
+    "name": "Classic manicure",
+    "price_eur": 28,
+    "duration_min": 40,
+    "description": "Nail shaping, gentle cuticle care, nourishing oil and classic polish in your chosen shade.",
+    "tags": ["classic", "refresh", "polish"],
+    "addons": [
+      {
+        "id": "french-tips",
+        "label": "French tips (+€6)",
+        "extra_price_eur": 6
+      }
+    ]
+  },
+  {
+    "id": "gel-manicure",
+    "name": "Gel polish manicure",
+    "price_eur": 39,
+    "duration_min": 60,
+    "description": "Long‑lasting gel color with a natural, thin finish and careful cuticle work for clean lines.",
+    "tags": ["gel", "long-lasting"],
+    "includes": "Soak‑off removal included"
+  },
+  {
+    "id": "spa-manicure",
+    "name": "Spa manicure & mask",
+    "price_eur": 49,
+    "duration_min": 70,
+    "description": "Exfoliation, warm mask and massage for hands, plus a classic or gel finish of your choice.",
+    "tags": ["spa", "relax", "hydration"],
+    "note": "Gift‑friendly"
+  },
+  {
+    "id": "express-tidy",
+    "name": "Express tidy‑up",
+    "price_eur": 20,
+    "duration_min": 25,
+    "description": "Quick shape, buff and nourishing oil for in‑between visits or bare‑nail lovers.",
+    "tags": ["no-polish", "quick"],
+    "note": "No polish – perfect for lunch breaks"
+  }
+]

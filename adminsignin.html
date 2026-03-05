@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nail Studio – Admin Sign In</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <style>
+      .signin-section { padding: 48px 0 60px; }
+      .signin-box { max-width: 380px; margin: 0 auto; }
+      .signin-title { font-size: 24px; letter-spacing: -0.02em; margin-bottom: 8px; }
+      .signin-intro { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+      .signin-form .form-actions { margin-top: 20px; }
+      .signin-form .btn-primary { width: 100%; justify-content: center; }
+      .signin-error { margin-top: 12px; padding: 10px 14px; border-radius: var(--radius-lg); background: #ffebee; color: #c62828; font-size: 13px; display: none; }
+      .signin-error.visible { display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="brand">
+              <div class="brand-mark">N</div>
+              <div class="brand-text">
+                <div class="brand-title">Nail Studio</div>
+                <div class="brand-subtitle">Admin Sign In</div>
+              </div>
+            </a>
+            <nav aria-label="Main menu">
+              <a href="index.html#services">Services</a>
+              <a href="reservation.html">Reservation</a>
+              <a href="admin.html">Admin</a>
+            </nav>
+            <div class="header-actions">
+              <a href="index.html" class="btn-primary"><span>← Site</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="signin-section">
+          <div class="container">
+            <div class="signin-box">
+              <h2 class="signin-title">Admin Sign In</h2>
+              <p class="signin-intro">Enter your username and password to access the admin panel.</p>
+
+              <form id="signin-form" class="reservation-form signin-form">
+                <div class="form-field">
+                  <label class="form-label" for="username">Username</label>
+                  <input type="text" id="username" name="username" class="form-input" required autocomplete="username" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" name="password" class="form-input" required autocomplete="current-password" />
+                </div>
+                <div id="signin-error" class="signin-error" role="alert"></div>
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">
+                    <span>Sign In</span>
+                    <span>→</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-inner">
+            <a href="adminsignin.html" class="btn-primary footer-admin-btn">NAIL STUDIO ADMIN</a>
+            <div class="footer-copy">© <span id="year"></span> Nail Studio. All rights reserved.</div>
+            <div class="footer-links">
+              <a href="index.html">Back to site</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const API_BASE = window.NAIL_STUDIO_API_BASE || "http://localhost:3001";
+        const form = document.getElementById("signin-form");
+        const errorEl = document.getElementById("signin-error");
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function showError(msg) {
+          errorEl.textContent = msg || "Invalid credentials.";
+          errorEl.classList.add("visible");
+        }
+
+        function hideError() {
+          errorEl.textContent = "";
+          errorEl.classList.remove("visible");
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          hideError();
+
+          const username = (document.getElementById("username").value || "").trim();
+          const password = document.getElementById("password").value || "";
+
+          if (!username || !password) {
+            showError("Enter username and password.");
+            return;
+          }
+
+          const btn = form.querySelector('button[type="submit"]');
+          const originalText = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = "<span>Signing in…</span>";
+
+          fetch(API_BASE + "/admin/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: username, password: password })
+          })
+            .then(function (res) {
+              return res.json().then(function (data) {
+                return { ok: res.ok, status: res.status, data: data };
+              });
+            })
+            .then(function (result) {
+              if (result.ok && result.data && result.data.success) {
+                try { localStorage.setItem("adminToken", result.data.token); } catch (err) {}
+                window.location.href = "admin.html";
+                return;
+              }
+              showError((result.data && result.data.error) || "Invalid credentials.");
+            })
+            .catch(function () {
+              showError("Connection error. Is the server running at " + API_BASE + "?");
+            })
+            .finally(function () {
+              btn.disabled = false;
+              btn.innerHTML = originalText;
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>

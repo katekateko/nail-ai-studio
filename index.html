@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nail Studio – Piękne paznokcie</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <a href="#top" class="brand">
+              <div class="brand-mark">N</div>
+              <div class="brand-text">
+                <div class="brand-title">Nail Studio</div>
+                <div class="brand-subtitle" data-i18n="brand.subtitle">
+                  Nowoczesny manicure & pielęgnacja
+                </div>
+              </div>
+            </a>
+            <nav aria-label="Main menu">
+              <a href="#services" data-i18n="nav.services">Usługi</a>
+              <a href="#opinions" data-i18n="nav.opinions">Opinie</a>
+              <a href="#location" data-i18n="nav.location">Lokalizacja</a>
+              <a href="#hours" data-i18n="nav.hours">Godziny otwarcia</a>
+            </nav>
+            <div class="header-actions">
+              <div class="lang-switch" aria-label="Wybór języka">
+                <button
+                  class="lang-btn lang-btn--active"
+                  type="button"
+                  data-lang="pl"
+                >
+                  PL
+                </button>
+                <button class="lang-btn" type="button" data-lang="en">
+                  EN
+                </button>
+              </div>
+              <a href="reservation.html" class="btn-primary">
+                <span data-i18n="header.book">Umów wizytę</span>
+                <span>➜</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="top" class="hero">
+          <div class="container">
+            <div class="hero-grid">
+              <div>
+                <div class="hero-eyebrow">
+                  <span class="hero-eyebrow-dot"></span>
+                  <span data-i18n="hero.eyebrow">
+                    Dopasowany manicure. Spokojna atmosfera.
+                  </span>
+                </div>
+                <h1 class="hero-title">
+                  <span data-i18n="hero.title.part1">Naturalnie piękne,</span>
+                  <span data-i18n="hero.title.highlight">zadbane paznokcie</span>
+                  <span data-i18n="hero.title.part2">na co dzień.</span>
+                </h1>
+                <p class="hero-subtitle">
+                  <span data-i18n="hero.subtitle">
+                    Kameralne studio paznokci, w którym dbamy o zdrową płytkę,
+                    dopracowane detale i spokojną wizytę bez pośpiechu.
+                  </span>
+                </p>
+                <div class="hero-actions">
+                  <button class="btn-primary">
+                    <span data-i18n="hero.cta">Zarezerwuj termin</span>
+                    <span>✶</span>
+                  </button>
+                  <div class="hero-secondary">
+                    <span class="hero-secondary-dot"></span>
+                    <span data-i18n="hero.secondary">
+                      Często dostępne terminy jeszcze w tym tygodniu
+                    </span>
+                  </div>
+                </div>
+                
+              </div>
+
+              <aside
+                class="hero-card hero-card--chat"
+                aria-label="Wirtualny konsultant Nail Studio"
+              >
+                <div class="hero-chat-header">
+                  <div class="hero-chat-bot">
+                    <div class="hero-chat-avatar">AI</div>
+                    <div class="hero-chat-meta">
+                      <div class="hero-chat-title" data-i18n="hero.chat.title">
+                        Zapytaj o swoje paznokcie
+                      </div>
+                      <div class="hero-chat-status">
+                        <span class="hero-chat-status-dot"></span>
+                        <span data-i18n="hero.chat.status">
+                          Online · odpowiada w kilka sekund
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-chat-tag" data-i18n="hero.chat.badge">
+                    Doradztwo 24/7
+                  </div>
+                </div>
+
+                <div id="chat-box">
+                  <div class="hero-chat-bubble">
+                    <span
+                      class="hero-chat-bubble-strong"
+                      data-i18n="hero.chat.bubble.strong"
+                    >
+                      Cześć, jestem wirtualnym konsultantem Nail Studio.
+                    </span>
+                    <span data-i18n="hero.chat.bubble.body">
+                      Zadaj mi dowolne pytanie o nasze usługi, czas trwania
+                      zabiegów, dobór koloru czy pielęgnację po wizycie.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="hero-chat-footer">
+                  <input
+                    type="text"
+                    id="chat-input"
+                    class="hero-chat-input"
+                    data-i18n-placeholder="hero.chat.input.placeholder"
+                    placeholder="Napisz pytanie o nasze usługi…"
+                    aria-label="Zadaj pytanie o usługi Nail Studio"
+                  />
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="section">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <h2 class="section-title" data-i18n="services.title">
+                  Główne usługi
+                </h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">
+                  Starannie dobrane zabiegi, które utrzymują paznokcie w dobrej
+                  kondycji, zadbane i łatwe w codziennym utrzymaniu.
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-grid" aria-label="Nail services">
+              <article class="menu-card">
+                <div class="menu-card-header">
+                  <h3 class="menu-name" data-i18n="services.classic.name">
+                    Manicure klasyczny
+                  </h3>
+                  <div class="menu-price" data-i18n="services.classic.price">
+                    28 € · 40 min
+                  </div>
+                </div>
+                <p
+                  class="menu-description"
+                  data-i18n="services.classic.description"
+                >
+                  Nadanie kształtu, delikatne opracowanie skórek, odżywczy olejek
+                  i klasyczny lakier w wybranym kolorze.
+                </p>
+                <div class="menu-meta">
+                  <span data-i18n="services.classic.meta1">
+                    Idealny na szybkie odświeżenie
+                  </span>
+                  <span data-i18n="services.classic.meta2">
+                    + french za dodatkowe 6 €
+                  </span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card-header">
+                  <h3 class="menu-name" data-i18n="services.gel.name">
+                    Manicure żelowy / hybrydowy
+                  </h3>
+                  <div class="menu-price" data-i18n="services.gel.price">
+                    39 € · 60 min
+                  </div>
+                </div>
+                <p class="menu-description" data-i18n="services.gel.description">
+                  Trwały kolor o naturalnie cienkim wykończeniu i precyzyjnym
+                  opracowaniu skórek dla idealnych linii.
+                </p>
+                <div class="menu-meta">
+                  <span data-i18n="services.gel.meta1">
+                    Utrzymuje się do 3 tygodni
+                  </span>
+                  <span data-i18n="services.gel.meta2">
+                    Delikatne zdjęcie stylizacji w cenie
+                  </span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card-header">
+                  <h3 class="menu-name" data-i18n="services.spa.name">
+                    Manicure SPA z maską
+                  </h3>
+                  <div class="menu-price" data-i18n="services.spa.price">
+                    49 € · 70 min
+                  </div>
+                </div>
+                <p class="menu-description" data-i18n="services.spa.description">
+                  Peeling, ciepła maska i masaż dłoni, a na koniec klasyczne lub
+                  żelowe wykończenie do wyboru.
+                </p>
+                <div class="menu-meta">
+                  <span data-i18n="services.spa.meta1"> Głębokie nawilżenie </span>
+                  <span data-i18n="services.spa.meta2">
+                    Idealne w prezencie
+                  </span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card-header">
+                  <h3 class="menu-name" data-i18n="services.express.name">
+                    Szybkie odświeżenie
+                  </h3>
+                  <div class="menu-price" data-i18n="services.express.price">
+                    20 € · 25 min
+                  </div>
+                </div>
+                <p
+                  class="menu-description"
+                  data-i18n="services.express.description"
+                >
+                  Szybkie nadanie kształtu, polerowanie i olejek odżywczy między
+                  wizytami lub dla miłośniczek naturalnej płytki.
+                </p>
+                <div class="menu-meta">
+                  <span data-i18n="services.express.meta1">
+                    Bez lakieru
+                  </span>
+                  <span data-i18n="services.express.meta2">
+                    W sam raz na przerwę obiadową
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="opinions" class="section opinions">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <h2 class="section-title" data-i18n="opinions.title">
+                  Co mówią nasze klientki
+                </h2>
+                <p class="section-subtitle" data-i18n="opinions.subtitle">
+                  Prawdziwe opinie osób, które wracają do nas po spokojną
+                  atmosferę i dopracowany manicure.
+                </p>
+              </div>
+            </div>
+
+            <div class="opinions-grid">
+              <aside class="opinions-summary" aria-label="Overall rating">
+                <div class="opinions-summary-inner">
+                  <div class="opinions-score">
+                    <div class="opinions-number">4.9</div>
+                    <div class="opinions-score-stars">
+                      <div class="opinions-stars-row">★ ★ ★ ★ ★</div>
+                      <span data-i18n="opinions.summary.based">
+                        Na podstawie ponad 180 wizyt
+                      </span>
+                    </div>
+                  </div>
+                  <p class="opinions-note" data-i18n="opinions.summary.note">
+                    Klientki najczęściej wspominają spokojne tempo, czystość i
+                    to, jak długo utrzymuje się manicure.
+                  </p>
+                  <div class="opinions-chip-row">
+                    <span
+                      class="opinions-chip"
+                      data-i18n="opinions.summary.chip1"
+                    >
+                      Precyzyjne opracowanie skórek
+                    </span>
+                    <span
+                      class="opinions-chip"
+                      data-i18n="opinions.summary.chip2"
+                    >
+                      Delikatna muzyka i oświetlenie
+                    </span>
+                    <span
+                      class="opinions-chip"
+                      data-i18n="opinions.summary.chip3"
+                    >
+                      Bez pośpiechu między wizytami
+                    </span>
+                    <span
+                      class="opinions-chip"
+                      data-i18n="opinions.summary.chip4"
+                    >
+                      Duży wybór nudów
+                    </span>
+                  </div>
+                </div>
+              </aside>
+
+              <div class="opinions-list" aria-label="Client testimonials">
+                <article class="opinion-card">
+                  <header class="opinion-header">
+                    <div class="opinion-author">
+                      <div class="opinion-avatar">A</div>
+                      <div>
+                        <div class="opinion-name">Anna K.</div>
+                        <div
+                          class="opinion-meta"
+                          data-i18n="opinions.anna.meta"
+                        >
+                          Manicure żelowy · stała klientka
+                        </div>
+                      </div>
+                    </div>
+                    <div class="opinions-stars-row">★ ★ ★ ★ ★</div>
+                  </header>
+                  <p class="opinion-body" data-i18n="opinions.anna.body">
+                    „Wizyta nigdy nie jest w pośpiechu. Mogę się zrelaksować,
+                    napić herbaty, a paznokcie po trzech tygodniach nadal
+                    wyglądają świetnie.”
+                  </p>
+                  <div class="opinion-tags">
+                    <span class="opinion-tag" data-i18n="opinions.anna.tag1">
+                      Małe domowe spa
+                    </span>
+                    <span class="opinion-tag" data-i18n="opinions.anna.tag2">
+                      Bardzo trwały efekt
+                    </span>
+                  </div>
+                </article>
+
+                <article class="opinion-card">
+                  <header class="opinion-header">
+                    <div class="opinion-author">
+                      <div class="opinion-avatar">M</div>
+                      <div>
+                        <div class="opinion-name">Maria L.</div>
+                        <div
+                          class="opinion-meta"
+                          data-i18n="opinions.maria.meta"
+                        >
+                          Manicure klasyczny · pierwsza wizyta
+                        </div>
+                      </div>
+                    </div>
+                    <div class="opinions-stars-row">★ ★ ★ ★ ★</div>
+                  </header>
+                  <p class="opinion-body" data-i18n="opinions.maria.body">
+                    „Studio jest nieskazitelnie czyste, a każdy krok zabiegu
+                    został mi wcześniej wyjaśniony. Doceniam, że nacisk jest na
+                    zdrowie paznokci, nie tylko kolor.”
+                  </p>
+                  <div class="opinion-tags">
+                    <span class="opinion-tag" data-i18n="opinions.maria.tag1">
+                      Bardzo czysto
+                    </span>
+                    <span class="opinion-tag" data-i18n="opinions.maria.tag2">
+                      Wszystko dokładnie tłumaczone
+                    </span>
+                  </div>
+                </article>
+
+                <article class="opinion-card">
+                  <header class="opinion-header">
+                    <div class="opinion-author">
+                      <div class="opinion-avatar">J</div>
+                      <div>
+                        <div class="opinion-name">Julia P.</div>
+                        <div
+                          class="opinion-meta"
+                          data-i18n="opinions.julia.meta"
+                        >
+                          Manicure SPA · wyjątkowa okazja
+                        </div>
+                      </div>
+                    </div>
+                    <div class="opinions-stars-row">★ ★ ★ ★ ★</div>
+                  </header>
+                  <p class="opinion-body" data-i18n="opinions.julia.body">
+                    „Przyszłam przed ważnym wydarzeniem i zebrałam mnóstwo
+                    komplementów. Propozycje odcieni nude były dokładnie tym,
+                    czego szukałam.”
+                  </p>
+                  <div class="opinion-tags">
+                    <span class="opinion-tag" data-i18n="opinions.julia.tag1">
+                      Świetne doradztwo kolorystyczne
+                    </span>
+                    <span class="opinion-tag" data-i18n="opinions.julia.tag2">
+                      Idealne przed wyjściem
+                    </span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-inner">
+            <a href="adminsignin.html" class="btn-primary footer-admin-btn">NAIL STUDIO ADMIN</a>
+            <div class="footer-copy">
+              © <span id="year"></span>
+              <span data-i18n="footer.copy">
+                Nail Studio. Wszystkie prawa zastrzeżone.
+              </span>
+            </div>
+            <div class="footer-links">
+              <a id="location" href="#" data-i18n="footer.location">
+                Ul. Główna 25 · Centrum miasta
+              </a>
+              <a id="hours" href="#" data-i18n="footer.hours">
+                Pon–Pt 10:00–19:00 · Sob 10:00–16:00
+              </a>
+              <a
+                href="mailto:hello@nailstudio.example"
+                data-i18n="footer.email"
+              >
+                hello@nailstudio.example
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script>
+      // Simple enhancement: always show the current year in the footer
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+
+      const translations = {
+        pl: {
+          "hero.chat.tag": "Wirtualny konsultant Nail Studio",
+          "hero.chat.title": "Zapytaj o swoje paznokcie",
+          "hero.chat.status": "Online · odpowiada w kilka sekund",
+          "hero.chat.badge": "Doradztwo 24/7",
+          "hero.chat.bubble.strong":
+            "Cześć, jestem wirtualnym konsultantem Nail Studio.",
+          "hero.chat.bubble.body":
+            "Zadaj mi dowolne pytanie o NAIL STUDIO.",
+          "hero.chat.input.placeholder":
+            "Napisz pytanie o nasze usługi…",
+          "brand.subtitle": "Nowoczesny manicure & pielęgnacja",
+          "nav.services": "Usługi",
+          "nav.opinions": "Opinie",
+          "nav.location": "Lokalizacja",
+          "nav.hours": "Godziny otwarcia",
+          "header.book": "Umów wizytę",
+          "hero.eyebrow": "Dopasowany manicure. Spokojna atmosfera.",
+          "hero.title.part1": "Naturalnie piękne,",
+          "hero.title.highlight": "zadbane paznokcie",
+          "hero.title.part2": "na co dzień.",
+          "hero.subtitle":
+            "Kameralne studio paznokci, w którym dbamy o zdrową płytkę, dopracowane detale i spokojną wizytę bez pośpiechu.",
+          "hero.cta": "Zarezerwuj termin",
+          "hero.secondary":
+            "Często dostępne terminy jeszcze w tym tygodniu",
+          "hero.meta.clean.title": "Czysto i bezpiecznie",
+          "hero.meta.clean.body":
+            "Sterylizacja medyczna, pilniki jednorazowe, higieniczne procedury.",
+          "hero.meta.center.title": "Blisko centrum",
+          "hero.meta.center.body":
+            "Spokojna uliczka tuż obok głównej arterii miasta.",
+          "hero.card.tag": "Nasza ulubiona stylizacja",
+          "hero.card.rating": "4,9 na podstawie ponad 180 wizyt",
+          "hero.card.availability":
+            "W tym tygodniu: 3 wolne wieczorne terminy",
+          "services.title": "Główne usługi",
+          "services.subtitle":
+            "Starannie dobrane zabiegi, które utrzymują paznokcie w dobrej kondycji, zadbane i łatwe w codziennym utrzymaniu.",
+          "services.classic.name": "Manicure klasyczny",
+          "services.classic.price": "28 € · 40 min",
+          "services.classic.description":
+            "Nadanie kształtu, delikatne opracowanie skórek, odżywczy olejek i klasyczny lakier w wybranym kolorze.",
+          "services.classic.meta1": "Idealny na szybkie odświeżenie",
+          "services.classic.meta2": " + french za dodatkowe 6 €",
+          "services.gel.name": "Manicure żelowy / hybrydowy",
+          "services.gel.price": "39 € · 60 min",
+          "services.gel.description":
+            "Trwały kolor o naturalnie cienkim wykończeniu i precyzyjnym opracowaniu skórek dla idealnych linii.",
+          "services.gel.meta1": "Utrzymuje się do 3 tygodni",
+          "services.gel.meta2": "Delikatne zdjęcie stylizacji w cenie",
+          "services.spa.name": "Manicure SPA z maską",
+          "services.spa.price": "49 € · 70 min",
+          "services.spa.description":
+            "Peeling, ciepła maska i masaż dłoni, a na koniec klasyczne lub żelowe wykończenie do wyboru.",
+          "services.spa.meta1": "Głębokie nawilżenie",
+          "services.spa.meta2": "Idealne w prezencie",
+          "services.express.name": "Szybkie odświeżenie",
+          "services.express.price": "20 € · 25 min",
+          "services.express.description":
+            "Szybkie nadanie kształtu, polerowanie i olejek odżywczy między wizytami lub dla miłośniczek naturalnej płytki.",
+          "services.express.meta1": "Bez lakieru",
+          "services.express.meta2": "W sam raz na przerwę obiadową",
+          "opinions.title": "Co mówią nasze klientki",
+          "opinions.subtitle":
+            "Prawdziwe opinie osób, które wracają do nas po spokojną atmosferę i dopracowany manicure.",
+          "opinions.summary.based": "Na podstawie ponad 180 wizyt",
+          "opinions.summary.note":
+            "Klientki najczęściej wspominają spokojne tempo, czystość i to, jak długo utrzymuje się manicure.",
+          "opinions.summary.chip1": "Precyzyjne opracowanie skórek",
+          "opinions.summary.chip2": "Delikatna muzyka i oświetlenie",
+          "opinions.summary.chip3": "Bez pośpiechu między wizytami",
+          "opinions.summary.chip4": "Duży wybór nudów",
+          "opinions.anna.meta": "Manicure żelowy · stała klientka",
+          "opinions.anna.body":
+            "„Wizyta nigdy nie jest w pośpiechu. Mogę się zrelaksować, napić herbaty, a paznokcie po trzech tygodniach nadal wyglądają świetnie.”",
+          "opinions.anna.tag1": "Małe domowe spa",
+          "opinions.anna.tag2": "Bardzo trwały efekt",
+          "opinions.maria.meta": "Manicure klasyczny · pierwsza wizyta",
+          "opinions.maria.body":
+            "„Studio jest nieskazitelnie czyste, a każdy krok zabiegu został mi wcześniej wyjaśniony. Doceniam, że nacisk jest na zdrowie paznokci, nie tylko kolor.”",
+          "opinions.maria.tag1": "Bardzo czysto",
+          "opinions.maria.tag2": "Wszystko dokładnie tłumaczone",
+          "opinions.julia.meta": "Manicure SPA · wyjątkowa okazja",
+          "opinions.julia.body":
+            "„Przyszłam przed ważnym wydarzeniem i zebrałam mnóstwo komplementów. Propozycje odcieni nude były dokładnie tym, czego szukałam.”",
+          "opinions.julia.tag1": "Świetne doradztwo kolorystyczne",
+          "opinions.julia.tag2": "Idealne przed wyjściem",
+          "footer.copy": "Nail Studio. Wszystkie prawa zastrzeżone.",
+          "footer.location": "Ul. Główna 25 · Centrum miasta",
+          "footer.hours": "Pon–Pt 10:00–19:00 · Sob 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+        en: {
+          "hero.chat.tag": "Nail Studio virtual consultant",
+          "hero.chat.title": "Ask about your nails",
+          "hero.chat.status": "Online · replies in seconds",
+          "hero.chat.badge": "Advice 24/7",
+          "hero.chat.bubble.strong":
+            "Hi, I'm the Nail Studio virtual consultant.",
+          "hero.chat.bubble.body":
+            "Ask me anything about NAIL STUDIO.",
+          "hero.chat.input.placeholder":
+            "Type a question about our services…",
+          "brand.subtitle": "Modern beauty & care",
+          "nav.services": "Services",
+          "nav.opinions": "Opinions",
+          "nav.location": "Location",
+          "nav.hours": "Opening hours",
+          "header.book": "Book an appointment",
+          "hero.eyebrow": "Tailored nails. Calm atmosphere.",
+          "hero.title.part1": "Effortless, elegant",
+          "hero.title.highlight": "nails",
+          "hero.title.part2": "for every day.",
+          "hero.subtitle":
+            "A boutique nail studio focused on healthy nails, refined details and a relaxed, unhurried experience.",
+          "hero.cta": "Reserve your time",
+          "hero.secondary": "Same‑week appointments often available",
+          "hero.meta.clean.title": "Clean & safe studio",
+          "hero.meta.clean.body":
+            "Medical‑grade sterilization, single‑use files.",
+          "hero.meta.center.title": "Central location",
+          "hero.meta.center.body":
+            "Calm corner just off the main street.",
+          "hero.card.tag": "Signature soft‑touch manicure",
+          "hero.card.rating": "4.9 from over 180 visits",
+          "hero.card.availability": "This week: 3 evening slots free",
+          "services.title": "Main menu",
+          "services.subtitle":
+            "Thoughtfully designed services that keep your nails healthy, polished and easy to maintain.",
+          "services.classic.name": "Classic manicure",
+          "services.classic.price": "€28 · 40 min",
+          "services.classic.description":
+            "Nail shaping, gentle cuticle care, nourishing oil and classic polish in your chosen shade.",
+          "services.classic.meta1": "Best for a quick refresh",
+          "services.classic.meta2": "+ French tips +€6",
+          "services.gel.name": "Gel polish manicure",
+          "services.gel.price": "€39 · 60 min",
+          "services.gel.description":
+            "Long‑lasting gel color with a natural, thin finish and careful cuticle work for clean lines.",
+          "services.gel.meta1": "Lasts up to 3 weeks",
+          "services.gel.meta2": "Soak‑off removal included",
+          "services.spa.name": "Spa manicure & mask",
+          "services.spa.price": "€49 · 70 min",
+          "services.spa.description":
+            "Exfoliation, warm mask and massage for hands, plus a classic or gel finish of your choice.",
+          "services.spa.meta1": "Deep hydration",
+          "services.spa.meta2": "Gift‑friendly",
+          "services.express.name": "Express tidy‑up",
+          "services.express.price": "€20 · 25 min",
+          "services.express.description":
+            "Quick shape, buff and nourishing oil for in‑between visits or bare‑nail lovers.",
+          "services.express.meta1": "No polish",
+          "services.express.meta2": "Perfect for lunch breaks",
+          "opinions.title": "What our clients say",
+          "opinions.subtitle":
+            "Real opinions from guests who come back again and again for the calm atmosphere and precise work.",
+          "opinions.summary.based": "Based on 180+ visits",
+          "opinions.summary.note":
+            "Guests most often mention the relaxed pace, cleanliness and how long their manicure lasts.",
+          "opinions.summary.chip1": "Precise cuticle work",
+          "opinions.summary.chip2": "Calm music & lighting",
+          "opinions.summary.chip3": "No rushing between clients",
+          "opinions.summary.chip4": "Wide choice of nude tones",
+          "opinions.anna.meta": "Gel manicure · monthly",
+          "opinions.anna.body":
+            "“It never feels like a rushed salon visit. I can actually relax, have a tea and my nails still look perfect three weeks later.”",
+          "opinions.anna.tag1": "Feels like a mini spa",
+          "opinions.anna.tag2": "Lasts long",
+          "opinions.maria.meta": "Classic manicure · first visit",
+          "opinions.maria.body":
+            "“The studio is spotless and everything is explained before we start. I appreciated the focus on nail health, not just color.”",
+          "opinions.maria.tag1": "Very clean",
+          "opinions.maria.tag2": "Explains each step",
+          "opinions.julia.meta": "Spa manicure · special occasion",
+          "opinions.julia.body":
+            "“I booked before an event and got so many compliments. The nude color recommendations were exactly what I needed.”",
+          "opinions.julia.tag1": "Great color advice",
+          "opinions.julia.tag2": "Perfect for events",
+          "footer.copy": "Nail Studio. All rights reserved.",
+          "footer.location": "Main street 25 · City center",
+          "footer.hours": "Mon–Fri 10:00–19:00 · Sat 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+      };
+
+      function applyLanguage(lang) {
+        const dict = translations[lang];
+        if (!dict) return;
+
+        document.documentElement.lang = lang;
+        document.title =
+          lang === "pl"
+            ? "Nail Studio – Piękne paznokcie"
+            : "Nail Studio – Beauty & Care";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value = dict[key];
+          if (typeof value === "string") {
+            el.textContent = value;
+          }
+        });
+
+        document
+          .querySelectorAll("[data-i18n-placeholder]")
+          .forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            const value = dict[key];
+            if (typeof value === "string") {
+              el.setAttribute("placeholder", value);
+            }
+          });
+
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => {
+            const isActive = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("lang-btn--active", isActive);
+          });
+
+        try {
+          window.localStorage.setItem("nailStudioLang", lang);
+        } catch (_) {}
+      }
+
+      (function initLanguageSwitcher() {
+        let initial = "pl";
+        try {
+          const stored = window.localStorage.getItem("nailStudioLang");
+          if (stored === "pl" || stored === "en") {
+            initial = stored;
+          }
+        } catch (_) {}
+
+        applyLanguage(initial);
+
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const lang = btn.getAttribute("data-lang");
+              if (!lang) return;
+              applyLanguage(lang);
+            });
+          });
+      })();
+    </script>
+    <script>
+      async function sendMessage() {
+        const input = document.getElementById("chat-input");
+        const message = input.value;
+      
+        if (!message) return;
+      
+        // Adding user message to the chat
+        const chatBox = document.getElementById("chat-box");
+        chatBox.innerHTML += "<p><b>You</b> " + message + "</p>";
+      
+        try {
+          const response = await fetch((window.NAIL_STUDIO_API_BASE || "http://localhost:3001") + "/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message })
+          });
+      
+          const data = await response.json();
+
+          const lang = document.documentElement.lang || "pl";
+          let reply = response.ok ? data.reply : null;
+          const russianFallback = "Я помогу вам выбрать услугу";
+          if (!reply || (typeof reply === "string" && reply.includes(russianFallback))) {
+            reply = lang === "pl"
+              ? "Jak mogę pomóc?"
+              : "How can I help you?";
+          }
+          chatBox.innerHTML += "<p><b>AI:</b> " + reply + "</p>";
+        } catch (error) {
+          chatBox.innerHTML += "<p><b>Error connecting to the server</b></p>";
+        }
+      
+        input.value = "";
+      }
+
+      (function initChatInput() {
+        const input = document.getElementById("chat-input");
+        if (!input) return;
+
+        input.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter") return;
+          event.preventDefault();
+          const message = input.value.trim();
+          if (!message) return;
+          const url = "aiconvo.html?q=" + encodeURIComponent(message);
+          window.location.href = url;
+        });
+      })();
+    </script>
+  </body>
+</html>

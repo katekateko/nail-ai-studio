@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nail Studio – Umów wizytę</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="brand">
+              <div class="brand-mark">N</div>
+              <div class="brand-text">
+                <div class="brand-title">Nail Studio</div>
+                <div class="brand-subtitle" data-i18n="brand.subtitle">
+                  Nowoczesny manicure & pielęgnacja
+                </div>
+              </div>
+            </a>
+            <nav aria-label="Main menu">
+              <a href="index.html#services" data-i18n="nav.services">Usługi</a>
+              <a href="index.html#opinions" data-i18n="nav.opinions">Opinie</a>
+              <a href="index.html#location" data-i18n="nav.location">Lokalizacja</a>
+              <a href="index.html#hours" data-i18n="nav.hours">Godziny otwarcia</a>
+            </nav>
+            <div class="header-actions">
+              <div class="lang-switch" aria-label="Wybór języka">
+                <button class="lang-btn lang-btn--active" type="button" data-lang="pl">PL</button>
+                <button class="lang-btn" type="button" data-lang="en">EN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="reservation-section">
+          <div class="container">
+            <div style="max-width: 420px; margin: 0 auto;">
+              <h2 class="reservation-title" data-i18n="reservation.title">Umów wizytę 💅</h2>
+              <p class="reservation-intro" data-i18n="reservation.intro">
+                Wypełnij formularz, a potwierdzenie wyślemy na podany adres e-mail.
+              </p>
+
+              <form id="booking-form" class="reservation-form">
+                <div class="form-field">
+                  <label class="form-label" for="client-name" data-i18n="reservation.name">Imię i nazwisko</label>
+                  <input type="text" id="client-name" class="form-input" required autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="client-email" data-i18n="reservation.email">E-mail</label>
+                  <input type="email" id="client-email" class="form-input" required autocomplete="email" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="service-select" data-i18n="reservation.service">Usługa</label>
+                  <select id="service-select" class="form-select" required>
+                    <option value="" data-i18n="reservation.servicePlaceholder">Wybierz usługę</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="booking-date" data-i18n="reservation.date">Data</label>
+                  <input type="date" id="booking-date" class="form-input" required />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="time-select" data-i18n="reservation.time">Godzina</label>
+                  <select id="time-select" class="form-select" required>
+                    <option value="" data-i18n="reservation.timePlaceholder">Wybierz godzinę</option>
+                  </select>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">
+                    <span data-i18n="reservation.submit">Zarezerwuj</span>
+                    <span>➜</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-inner">
+            <a href="adminsignin.html" class="btn-primary footer-admin-btn">NAIL STUDIO ADMIN</a>
+            <div class="footer-copy">
+              © <span id="year"></span>
+              <span data-i18n="footer.copy">Nail Studio. Wszystkie prawa zastrzeżone.</span>
+            </div>
+            <div class="footer-links">
+              <a href="index.html#location" data-i18n="footer.location">Ul. Główna 25 · Centrum miasta</a>
+              <a href="index.html#hours" data-i18n="footer.hours">Pon–Pt 10:00–19:00 · Sob 10:00–16:00</a>
+              <a href="mailto:hello@nailstudio.example" data-i18n="footer.email">hello@nailstudio.example</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear().toString();
+
+      const translations = {
+        pl: {
+          "brand.subtitle": "Nowoczesny manicure & pielęgnacja",
+          "nav.services": "Usługi",
+          "nav.opinions": "Opinie",
+          "nav.location": "Lokalizacja",
+          "nav.hours": "Godziny otwarcia",
+          "reservation.title": "Umów wizytę 💅",
+          "reservation.intro": "Wypełnij formularz, a potwierdzenie wyślemy na podany adres e-mail.",
+          "reservation.name": "Imię i nazwisko",
+          "reservation.email": "E-mail",
+          "reservation.service": "Usługa",
+          "reservation.servicePlaceholder": "Wybierz usługę",
+          "reservation.date": "Data",
+          "reservation.time": "Godzina",
+          "reservation.timePlaceholder": "Wybierz godzinę",
+          "reservation.submit": "Zarezerwuj",
+          "footer.copy": "Nail Studio. Wszystkie prawa zastrzeżone.",
+          "footer.location": "Ul. Główna 25 · Centrum miasta",
+          "footer.hours": "Pon–Pt 10:00–19:00 · Sob 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+        en: {
+          "brand.subtitle": "Modern beauty & care",
+          "nav.services": "Services",
+          "nav.opinions": "Opinions",
+          "nav.location": "Location",
+          "nav.hours": "Opening hours",
+          "reservation.title": "Book your appointment 💅",
+          "reservation.intro": "Fill in the form and we’ll send confirmation to your email.",
+          "reservation.name": "Name",
+          "reservation.email": "Email",
+          "reservation.service": "Service",
+          "reservation.servicePlaceholder": "Select service",
+          "reservation.date": "Date",
+          "reservation.time": "Time",
+          "reservation.timePlaceholder": "Select time",
+          "reservation.submit": "Book now",
+          "footer.copy": "Nail Studio. All rights reserved.",
+          "footer.location": "Main street 25 · City center",
+          "footer.hours": "Mon–Fri 10:00–19:00 · Sat 10:00–16:00",
+          "footer.email": "hello@nailstudio.example",
+        },
+      };
+
+      function applyLanguage(lang) {
+        const dict = translations[lang];
+        if (!dict) return;
+        document.documentElement.lang = lang;
+        document.title = lang === "pl" ? "Nail Studio – Umów wizytę" : "Nail Studio – Book appointment";
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n");
+          const value = dict[key];
+          if (typeof value === "string") el.textContent = value;
+        });
+        document.querySelectorAll(".lang-btn").forEach(function (btn) {
+          btn.classList.toggle("lang-btn--active", btn.getAttribute("data-lang") === lang);
+        });
+        var servicePh = document.querySelector("#service-select option[value='']");
+        if (servicePh) servicePh.textContent = dict["reservation.servicePlaceholder"] || (lang === "pl" ? "Wybierz usługę" : "Select service");
+        var timePh = document.querySelector("#time-select option[value='']");
+        if (timePh) timePh.textContent = dict["reservation.timePlaceholder"] || (lang === "pl" ? "Wybierz godzinę" : "Select time");
+        try { window.localStorage.setItem("nailStudioLang", lang); } catch (_) {}
+      }
+
+      (function initLang() {
+        var initial = "pl";
+        try {
+          var stored = window.localStorage.getItem("nailStudioLang");
+          if (stored === "pl" || stored === "en") initial = stored;
+        } catch (_) {}
+        applyLanguage(initial);
+        document.querySelectorAll(".lang-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var lang = btn.getAttribute("data-lang");
+            if (lang) applyLanguage(lang);
+          });
+        });
+      })();
+    </script>
+    <script src="reservation.js"></script>
+  </body>
+</html>

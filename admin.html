@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nail Studio – Admin</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <style>
+      .admin-section { padding: 32px 0 60px; }
+      .admin-title { font-size: 24px; letter-spacing: -0.02em; margin-bottom: 20px; }
+      .admin-table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-soft); background: var(--bg-alt); box-shadow: 0 8px 22px rgba(0,0,0,0.03); }
+      .admin-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      .admin-table th, .admin-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border-soft); }
+      .admin-table th { font-weight: 600; color: var(--text); background: rgba(247, 242, 248, 0.8); }
+      .admin-table tbody tr:last-child td { border-bottom: none; }
+      .admin-table tbody tr:hover { background: rgba(251, 225, 234, 0.2); }
+      .admin-table .col-actions { text-align: right; white-space: nowrap; }
+      .admin-table .col-actions button { margin-left: 8px; padding: 6px 12px; font-size: 12px; border-radius: var(--radius-pill); border: none; cursor: pointer; font-weight: 600; }
+      .btn-cancel { background: #f4e4e4; color: #a63d3d; }
+      .btn-cancel:hover { background: #efd0d0; }
+      .btn-update { background: var(--accent-soft); color: var(--accent-dark); }
+      .btn-update:hover { background: #f5cce0; }
+      .status-badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+      .status-confirmed { background: #e8f5e9; color: #2e7d32; }
+      .status-cancelled { background: #ffebee; color: #c62828; }
+      .status-completed { background: #e3f2fd; color: #1565c0; }
+      .admin-empty { padding: 32px; text-align: center; color: var(--muted); }
+      .admin-table-sortable { cursor: pointer; user-select: none; }
+      .admin-table-sortable:hover { background: rgba(251, 225, 234, 0.4); }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="header-inner">
+            <div class="brand">
+              <div class="brand-mark">N</div>
+              <div class="brand-text">
+                <div class="brand-title">Nail Studio</div>
+                <div class="brand-subtitle">Admin</div>
+              </div>
+            </div>
+            <div class="header-actions">
+              <button type="button" id="admin-signout" class="btn-primary">Sign out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="admin-section">
+          <div class="container">
+            <h2 class="admin-title">Reservations</h2>
+            <p style="margin-bottom: 16px;"><button type="button" id="admin-refresh" class="btn-primary">Refresh list</button></p>
+            <div class="admin-table-wrap">
+              <table class="admin-table" id="reservations-table">
+                <thead>
+                  <tr>
+                    <th id="col-date" class="admin-table-sortable" title="Click to sort">Date <span id="date-sort-icon" aria-hidden="true"></span></th>
+                    <th>Time</th>
+                    <th>Service</th>
+                    <th>Client Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th class="col-actions"></th>
+                  </tr>
+                </thead>
+                <tbody id="reservations-body">
+                  <tr>
+                    <td colspan="7" class="admin-empty">Loading…</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-copy">© <span id="year"></span> Nail Studio. All rights reserved.</div>
+            <div class="footer-links">
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
