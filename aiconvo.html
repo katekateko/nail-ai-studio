@@ -304,7 +304,12 @@
         const messages = document.getElementById("chat-messages");
         if (!input || !messages) return;
 
-        let sessionId = localStorage.getItem("sessionId") || null;
+        // Each page load gets its own fresh sessionId so every new chat
+        // is treated as a new client conversation.
+        let sessionId =
+          "sess_" +
+          Math.random().toString(36).slice(2) +
+          Date.now().toString(36);
         const conversationHistory = [];
 
         function appendMessage({ from, text }) {
@@ -359,11 +364,7 @@
 
             if (data.sessionId) {
               sessionId = data.sessionId;
-              try {
-                localStorage.setItem("sessionId", sessionId);
-              } catch (_) {}
-            }
-
+              
             const reply = response.ok && data && typeof data.reply === "string"
               ? data.reply
               : null;
